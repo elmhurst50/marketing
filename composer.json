@@ -1,0 +1,25 @@
+{
+    "name": "samjoyce777/marketing",
+    "description": "Marketing package",
+    "version": "1.0.0",
+    "type": "library",
+
+    "require": {
+
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-4": {
+            "SamJoyce777\\Marketing\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SamJoyce777\\Marketing\\Providers\\MarketingServiceProvider"
+            ]
+        }
+    }
+}
