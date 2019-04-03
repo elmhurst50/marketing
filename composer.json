@@ -1,11 +1,11 @@
 {
     "name": "samjoyce777/marketing",
     "description": "Marketing package",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "library",
 
     "require": {
-
+        "global4communications/smsmanager": "1.*"
     },
     "license": "MIT",
     "minimum-stability": "dev",
