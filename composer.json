@@ -1,7 +1,7 @@
 {
     "name": "samjoyce777/marketing",
     "description": "Marketing package",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "library",
 
     "require": {

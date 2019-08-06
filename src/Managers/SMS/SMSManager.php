@@ -10,8 +10,13 @@ class SMSManager
     public function __construct()
     {
         $this->sms_manager = new \Global4Communications\SMSManager\SMSManager(new TextAnywhere());
+    }
 
+    public function setCredentials()
+    {
         $this->sms_manager->setCredentials(env('TEXTANYWHERE_USERNAME'), env('TEXTANYWHERE_PASSWORD'));
+
+        return $this;
     }
 
     /**
@@ -28,7 +33,7 @@ class SMSManager
 
         $to = '+44' . $mobileNumber;
 
-        if(\App::environment() == 'production'){
+        if (\App::environment() == 'production') {
             try {
                 $this->sms_manager->sendSMS($content, $to, [
                     'returnCSVString' => true,
@@ -39,11 +44,11 @@ class SMSManager
                     'replyData' => url('/sms/sms-reply')
                 ]);
             } catch (\Exception $e) {
-                return \Logger::error('SMS', 'Send SMS failed. '.$e->getMessage(), [], $e->getLine(), $e->getMessage());
+                return \Logger::error('SMS', 'Send SMS failed. ' . $e->getMessage(), [], $e->getLine(), $e->getMessage());
             }
             return true;
-        }else{
-            \Logger::debug('SMS', 'Local SMS sent to '. $mobileNumber);
+        } else {
+            \Logger::debug('SMS', 'Local SMS sent to ' . $mobileNumber);
         }
     }
 
