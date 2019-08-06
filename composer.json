@@ -1,11 +1,16 @@
 {
     "name": "samjoyce777/marketing",
     "description": "Marketing package",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "library",
-
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:Global4Communications/smsmanager.git"
+        }
+    ],
     "require": {
-        "global4communications/smsmanager": "1.*"
+        "Global4Communications/sms-manager": "1.*"
     },
     "license": "MIT",
     "minimum-stability": "dev",

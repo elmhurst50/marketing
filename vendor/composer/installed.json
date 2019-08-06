@@ -1,0 +1,30 @@
+[
+    {
+        "name": "global4communications/sms-manager",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:Global4Communications/smsmanager.git",
+            "reference": "ad0dcee56b42ec9fa8b4b4eaf321e2afc0fd7252"
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2019-08-06T15:16:06+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Global4Communications\\SMSManager\\": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "Sam Joyce",
+                "email": "sam.joyce@global4.co.uk"
+            }
+        ],
+        "description": "SMS Manager API for G4"
+    }
+]

@@ -1,0 +1,44 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "df712e35207e58aac77bf859e6c23935",
+    "packages": [
+        {
+            "name": "global4communications/sms-manager",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Global4Communications/smsmanager.git",
+                "reference": "ad0dcee56b42ec9fa8b4b4eaf321e2afc0fd7252"
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Global4Communications\\SMSManager\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Sam Joyce",
+                    "email": "sam.joyce@global4.co.uk"
+                }
+            ],
+            "description": "SMS Manager API for G4",
+            "time": "2019-08-06T15:16:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
