@@ -1,11 +1,9 @@
 <?php namespace SamJoyce777\Marketing\Emails\Development;
 
-use Global4Communications\Residential\Core\Models\ResidentialCustomer;
-use SamJoyce777\Marketing\Emails\Email;
+use SamJoyce777\Marketing\Emails\EmailAbstract;
 use SamJoyce777\Marketing\Emails\EmailInterface;
-use SamJoyce777\Marketing\Lists\Emails\ListProviderInterface;
 
-class Test extends Email implements EmailInterface
+class Test extends EmailAbstract implements EmailInterface
 {
     protected $title = 'Test Email';
 

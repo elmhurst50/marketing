@@ -14,7 +14,7 @@ class AddUniqueIdToEmailsSent extends Migration
     public function up()
     {
         Schema::table('emails_sent', function (Blueprint $table) {
-            $table->string('unique_token')->before('email_identifier');
+            $table->string('email_uid')->before('email_identifier');
         });
     }
 
@@ -26,7 +26,7 @@ class AddUniqueIdToEmailsSent extends Migration
     public function down()
     {
         Schema::table('emails_sent', function (Blueprint $table) {
-            $table->dropColumn('unique_token');
+            $table->dropColumn('email_uid');
         });
     }
 }

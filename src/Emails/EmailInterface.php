@@ -1,22 +1,24 @@
 <?php namespace SamJoyce777\Marketing\Emails;
 
-
 use SamJoyce777\Marketing\Lists\Emails\EmailRecipientData;
-use SamJoyce777\Marketing\Models\EmailSent;
 
 interface EmailInterface
 {
-    public function getTitle();
+    public function getTitle():string;
 
-    public function getDescription();
+    public function getDescription():string;
 
-    public function getTemplate();
+    public function getTemplate():string;
 
-    public function getSenderEmail();
+    public function getSenderEmail():string;
 
-    public function getSenderName();
+    public function getSenderName():string;
 
-    public function getSubject();
+    public function getSubject():string;
 
-    public function send($email_address, EmailRecipientData $data, EmailSent $emailSent);
+    public function getTags():array;
+
+    public function getMeta():array;
+
+    public function getHTML(EmailRecipientData $emailRecipientData):?string;
 }

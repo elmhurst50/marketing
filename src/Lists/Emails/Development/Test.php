@@ -25,9 +25,9 @@ class Test extends ListProvider implements ListProviderInterface
 
     /**
      * Returns list of all emails
-     * @return mixed
+     * @return array
      */
-    public function getList($options)
+    public function getList($options):array
     {
         return [
             'sam.joyce@global4.co.uk',
@@ -58,7 +58,7 @@ class Test extends ListProvider implements ListProviderInterface
      * @param $email
      * @return EmailRecipientData
      */
-    public function getEmailRecipientData($email)
+    public function getEmailRecipientData($email):EmailRecipientData
     {
         if($email == 'samjoyce777@gmail.com'){
             $this->email_recipient_data->setData([

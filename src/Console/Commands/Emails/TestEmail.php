@@ -1,8 +1,10 @@
 <?php namespace SamJoyce777\Marketing\Console\Commands\Emails;
 
+use SamJoyce777\Marketing\EmailDispatchers\MandrillEmailDispatcher;
 use SamJoyce777\Marketing\Emails\WeeklyBroadband\SocialMedia;
 use SamJoyce777\Marketing\Jobs\SendEmail;
 use Illuminate\Console\Command;
+use SamJoyce777\Marketing\Lists\Emails\Development\Test;
 
 class TestEmail extends Command
 {
@@ -11,7 +13,7 @@ class TestEmail extends Command
      *
      * @var string
      */
-    protected $signature = 'emails:test {email_identifier?}';
+    protected $signature = 'emails:test {email_address}';
 
     /**
      * The console command description.
@@ -41,21 +43,19 @@ class TestEmail extends Command
      */
     public function handle()
     {
-        $email_class = ($this->argument('email_identifier') != '')
-            ? config('marketing.emails.' . $this->argument('email_identifier'))
-            : config('marketing.emails.development.test');
+        $email = new \SamJoyce777\Marketing\Emails\Development\Test();
 
-        $list_class = config('marketing.lists.emails.development.test');
+        $list_provider = new Test();
 
-        $list_provider = new $list_class;
+        $email_dispatcher = new MandrillEmailDispatcher();
 
-        foreach ($list_provider->getList((object)[]) as $email) {
-            $this->line('Sending test email to ' . $email);
+        $email_address = $this->argument('email_address');
 
-            SendEmail::dispatch($email_class, $list_class, $email, 666)
-                ->onQueue('emails')
-                ->delay(now()->addSeconds(10));
-        }
+        $this->line('Sending test email to ' . $email_address);
+
+        $emailRecipientData = $list_provider->getEmailRecipientData($email_address);
+dd($emailRecipientData);
+        $email_dispatcher->send($email_address, $emailRecipientData, $email);
 
         $this->info('Complete.');
     }

@@ -30,6 +30,10 @@ class MarketingServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations');
 
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../Http/Routes/routes.php';
+        }
+
         view()->composer(['marketing::emails.emails.common.sidebar'], EmailsSidebarComposer::class);
 
         view()->composer(['marketing::emails.lists.common.sidebar'], EmailListsSidebarComposer::class);

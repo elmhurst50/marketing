@@ -16,14 +16,15 @@ class CreateEmailsSent extends Migration
         Schema::create('emails_sent', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('email_name');
+            $table->string('email_address');
             $table->string('email_class');
             $table->dateTime('queued_at');
             $table->dateTime('sent_at')->nullable();
             $table->boolean('spam')->default(false);
             $table->boolean('opened')->default(false);
             $table->boolean('clicked')->default(false);
-            $table->integer('residential_customer_id')->nullable();
+            $table->integer('sender_reference')->nullable();
+            $table->integer('recipient_reference')->nullable();
         });
     }
 

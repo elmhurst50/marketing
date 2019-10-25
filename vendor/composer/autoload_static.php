@@ -6,18 +6,41 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Contracts\\Translation\\' => 30,
+            'Symfony\\Component\\Translation\\' => 30,
             'SamJoyce777\\Marketing\\' => 22,
         ),
         'G' => 
         array (
             'Global4Communications\\SMSManager\\' => 33,
         ),
+        'C' => 
+        array (
+            'Carbon\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Contracts\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation-contracts',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
         'SamJoyce777\\Marketing\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -26,6 +49,20 @@ class ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c
         array (
             0 => __DIR__ . '/..' . '/global4communications/sms-manager/src',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'M' => 
+        array (
+            'Mandrill' => 
+            array (
+                0 => __DIR__ . '/..' . '/mandrill/mandrill/src',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -33,6 +70,7 @@ class ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

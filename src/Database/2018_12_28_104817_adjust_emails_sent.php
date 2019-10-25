@@ -16,7 +16,7 @@ class AdjustEmailsSent extends Migration
         Schema::table('emails_sent', function (Blueprint $table) {
             $table->integer('opened')->change();
             $table->integer('clicked')->change();
-            $table->string('mandrill_status');
+            $table->string('provider_status')->nullable();
             $table->string('sender');
             $table->string('subject');
         });
@@ -32,7 +32,7 @@ class AdjustEmailsSent extends Migration
         Schema::table('emails_sent', function (Blueprint $table) {
             $table->boolean('opened')->change();
             $table->boolean('clicked')->change();
-            $table->dropColumn('mandrill_status');
+            $table->dropColumn('provider_status');
             $table->dropColumn('sender');
             $table->dropColumn('subject');
         });

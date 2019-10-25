@@ -1,9 +1,10 @@
 <?php namespace SamJoyce777\Marketing\Emails\Development;
 
 use SamJoyce777\Marketing\Emails\Email;
+use SamJoyce777\Marketing\Emails\EmailAbstract;
 use SamJoyce777\Marketing\Emails\EmailInterface;
 
-class Outlook extends Email implements EmailInterface
+class Outlook extends EmailAbstract implements EmailInterface
 {
     protected $title = 'Outlook Test Email';
 

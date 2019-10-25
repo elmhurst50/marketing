@@ -4,19 +4,43 @@ use Global4Communications\Residential\Core\Models\ResidentialCustomer;
 use Carbon\Carbon;
 use SamJoyce777\Marketing\Lists\Emails\ListProviderInterface;
 
+/**
+ * Email reciepient data is the data that is passed to the email to create the email
+ * Class EmailRecipientData
+ * @package SamJoyce777\Marketing\Lists\Emails
+ */
 class EmailRecipientData
 {
-    protected $data;
+    protected $data = [];
 
     protected $allowed_keys;
 
     public function __construct()
     {
+        $this->data['recipient_sender_uid'] = null;
+
         $this->allowed_keys = ['name', 'address', 'email', 'email_name', 'residential_customer_id'];
     }
 
     /**
-     * Sets the data that will be passed to the email
+     * Set the recipient sender uid
+     * @param string $recipient_sender_uid
+     */
+    public function setRecipientSenderUID(string $recipient_sender_uid)
+    {
+        $this->data['recipient_sender_uid'] = $recipient_sender_uid;
+    }
+
+    /**
+     * Get the recipient sender uid
+     */
+    public function getRecipientSenderUID():?string
+    {
+        return $this->data['recipient_sender_uid'];
+    }
+
+    /**
+     * Sets the data that will be passed to the email blade template
      * @param array $data
      * @throws \Exception
      */
@@ -40,7 +64,7 @@ class EmailRecipientData
      * Returns a fields
      * @return string
      */
-    public function getField($field)
+    public function getField($field):string
     {
         return isset($this->data[$field]) ? $this->data[$field] : null;
     }
@@ -50,7 +74,7 @@ class EmailRecipientData
      * @param $data
      * @return bool
      */
-    protected function allKeysValid($data)
+    protected function allKeysValid($data):bool
     {
         foreach ($data as $key => $value){
             if(!in_array($key, $this->allowed_keys)) return false;
@@ -63,7 +87,8 @@ class EmailRecipientData
      * Returns string of all allowed keys
      * @return string
      */
-    protected function listAllowedKeys(){
+    protected function listAllowedKeys():string
+    {
         $list = '';
 
         foreach ($this->allowed_keys as $key){

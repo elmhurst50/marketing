@@ -10,7 +10,9 @@
         }
     ],
     "require": {
-        "Global4Communications/sms-manager": "1.*"
+        "Global4Communications/sms-manager": "1.*",
+        "mandrill/mandrill": "1.*",
+        "nesbot/carbon": "dev-master"
     },
     "license": "MIT",
     "minimum-stability": "dev",
