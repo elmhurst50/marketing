@@ -1,42 +1,61 @@
 <?php namespace SamJoyce777\Marketing\Managers\Emails;
 
 use Carbon\Carbon;
+use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
+use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
+use SamJoyce777\Marketing\EmailDispatchers\MandrillEmailDispatcher;
 use SamJoyce777\Marketing\Jobs\SendEmail;
 use SamJoyce777\Marketing\Models\EmailBlackList;
-use SamJoyce777\Marketing\Models\EmailSent;
 
+/**
+ * This is the main class to send emails
+ * Class EmailManager
+ * @package SamJoyce777\Marketing\Managers\Emails
+ */
 class EmailManager
 {
+    protected $emailDispatcher;
+
+    public function __construct()
+    {
+        $this->emailDispatcher = new MandrillEmailDispatcher();
+    }
+
     /**
-     * Adds the email to the work queue
-     * @param $email_identifier
-     * @param $list_class
-     * @param $email_address
-     * @param $delay_minutes
+     * Send the email
+     * @param EmailRecipientData $emailRecipientData
+     * @param EmailCreatorInterface $emailCreator
      * @return bool
      */
-    public function queueEmail($email_identifier, $list_class, $email_address, $delay_minutes)
+    public function sendEmail(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator):bool
     {
-        if(!$this->allowedToSend($email_address)) return false;
+        if(!$this->allowedToSend($emailRecipientData->getEmailAddress())) return false;
 
-        $email_class = config('marketing.emails.' . $email_identifier);
+        if ($emailCreator->hasAllRequiredData()) {
+            $this->emailDispatcher->send($emailRecipientData, $emailCreator);
 
-        $list_provider = new $list_class;
+            return true;
+        }
 
-        $emailRecipientData = $list_provider->getEmailRecipientData($email_address);
+        return false;
+    }
 
-        $emailSent = EmailSent::create([
-            'email' => $email_address,
-            'unique_token' => createUniqueToken(),
-            'email_identifier' => $email_identifier,
-            'email_class' => $email_class,
-            'queued_at' => Carbon::now()->toDateTimeString(),
-            'residential_customer_id' => $emailRecipientData->getField('residential_customer_id')
-        ]);
+    /**
+     * Adds the email to the work queue
+     * @param EmailRecipientData $emailRecipientData
+     * @param EmailCreatorInterface $emailCreator
+     * @param Carbon $send_date
+     * @return bool
+     */
+    public function queueEmail(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator, Carbon $send_date = null)
+    {
+        if(!$this->allowedToSend($emailRecipientData->getEmailAddress())) return false;
 
-        SendEmail::dispatch($email_class, $list_class, $email_address, $emailSent->id)
+        if(!$send_date) $send_date = Carbon::now();
+
+        SendEmail::dispatch($emailRecipientData, $emailCreator)
             ->onQueue('emails')
-            ->delay(now()->addMinutes($delay_minutes));
+            ->delay($send_date);
 
         return true;
     }

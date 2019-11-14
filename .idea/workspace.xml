@@ -2,28 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6dded8-7e45-408b-b579-79494137c673" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Database/2018_12_18_164342_change_field_name_on_email_sent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Database/2019_01_04_124058_add_email_to_email_sent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Database/2019_01_09_151009_add_unsubscribe_to_emails_sent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Emails/Email.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailRecipientData.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Emails/Development/Outlook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php" afterPath="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmail.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmailViaJob.php" afterPath="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmailViaJob.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/Development/Test.php" afterPath="$PROJECT_DIR$/example/EmailCreators/Development/TestEmailCreator.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/EmailAbstract.php" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailCreatorAbstract.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/EmailInterface.php" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailCreatorInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php" afterPath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/2018_12_13_151526_create_emails_sent.php" afterPath="$PROJECT_DIR$/src/Database/2018_12_13_151526_create_emails_sent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/2018_12_28_104817_adjust_emails_sent.php" afterPath="$PROJECT_DIR$/src/Database/2018_12_28_104817_adjust_emails_sent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/2019_01_04_104849_add_unique_id_to_emails_sent.php" afterPath="$PROJECT_DIR$/src/Database/2019_01_04_104849_add_unique_id_to_emails_sent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Emails/Development/Outlook.php" afterPath="$PROJECT_DIR$/src/Emails/Development/Outlook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Emails/Development/Test.php" afterPath="$PROJECT_DIR$/src/Emails/Development/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Emails/EmailInterface.php" afterPath="$PROJECT_DIR$/src/Emails/EmailInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config/lists/emails.php" afterPath="$PROJECT_DIR$/src/Config/lists/emails.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jobs/SendEmail.php" afterPath="$PROJECT_DIR$/src/Jobs/SendEmail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" afterPath="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php" afterPath="$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/Emails/ListProvider.php" afterPath="$PROJECT_DIR$/src/Lists/Emails/ListProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/SMS/SMSRecipientData.php" afterPath="$PROJECT_DIR$/src/Lists/SMS/SMSRecipientData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Managers/Emails/EmailManager.php" afterPath="$PROJECT_DIR$/src/Managers/Emails/EmailManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" afterPath="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
@@ -36,83 +37,120 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestEmail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php">
+      <file leaf-file-name="EmailCreatorAbstract.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EmailCreators/EmailCreatorAbstract.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="24" />
-              <folding>
-                <element signature="e#64#131#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="396">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailDispatcherAbstract.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php">
+      <file leaf-file-name="TestEmail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/Console/Commands/Emails/TestEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="1122">
+              <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
               <folding>
-                <element signature="e#57#75#0#PHP" expanded="true" />
+                <element signature="e#81#167#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailRecipientData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php">
+      <file leaf-file-name="TestEmailViaJob.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/Console/Commands/Emails/TestEmailViaJob.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="55" />
+              <folding>
+                <element signature="e#81#138#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestEmailViewData.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/EmailViewData/Development/TestEmailViewData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="55" />
+              <folding>
+                <element signature="e#83#145#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleServiceProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="638">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Emails/EmailInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MandrillEmailDispatcher.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
-                <element signature="e#57#105#0#PHP" expanded="true" />
+                <element signature="e#67#144#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailViewDataInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EmailViewData/EmailViewDataInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Managers/Emails/EmailManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="e#56#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestEmailCreator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/EmailCreators/Development/TestEmailCreator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#83#144#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SamJoyce777\Marketing\Lists\Emails</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>SamJoyce777\Marketing\Emails</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\wamp64\www\development\marketing</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,29 +159,56 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Managers/SMS/SMSManager.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Config/emails.php" />
         <option value="$PROJECT_DIR$/src/Config/sms.php" />
-        <option value="$PROJECT_DIR$/src/Config/lists/emails.php" />
         <option value="$PROJECT_DIR$/src/Config/lists/sms.php" />
         <option value="$PROJECT_DIR$/src/Emails/AbstractEmail.php" />
         <option value="$PROJECT_DIR$/src/Emails/Email.php" />
-        <option value="$PROJECT_DIR$/src/Emails/Development/Test.php" />
         <option value="$PROJECT_DIR$/src/Emails/Development/Outlook.php" />
         <option value="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcher.php" />
-        <option value="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" />
-        <option value="$PROJECT_DIR$/src/Jobs/SendEmail.php" />
-        <option value="$PROJECT_DIR$/src/Emails/EmailAbstract.php" />
-        <option value="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" />
         <option value="$PROJECT_DIR$/src/Emails/EmailInterface.php" />
         <option value="$PROJECT_DIR$/src/Database/2018_12_13_151526_create_emails_sent.php" />
         <option value="$PROJECT_DIR$/src/Database/2018_12_28_104817_adjust_emails_sent.php" />
         <option value="$PROJECT_DIR$/src/Database/2019_01_04_104849_add_unique_id_to_emails_sent.php" />
         <option value="$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php" />
+        <option value="$PROJECT_DIR$/src/Config/lists/emails.php" />
+        <option value="$PROJECT_DIR$/src/Lists/Emails/ListProviderInterface.php" />
+        <option value="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" />
+        <option value="$PROJECT_DIR$/src/Emails/EmailRecipientData.php" />
+        <option value="$PROJECT_DIR$/src/Lists/Emails/ListProvider.php" />
+        <option value="$PROJECT_DIR$/src/Emails/Development/Test.php" />
+        <option value="$PROJECT_DIR$/src/Emails/EmailAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/EmailAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/Development/Outlook.phpCreator" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/Development/Outlook.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/Development/Test.php" />
+        <option value="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/EmailCreatorInterface.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/Development/TestCreator.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/Development/TestEmailCreator.php" />
         <option value="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php" />
         <option value="$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php" />
+        <option value="$PROJECT_DIR$/src/Jobs/SendEmail.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/EmailRecipientData.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewDatas/EmailViewDataInterface.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewDatas/EmailCreatorAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewDatas/EmailViewDatasAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewDatas/Development/TestEmailCreator.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewData/EmailViewDatasAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewData/Development/TestEmailCreator.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewData/EmailViewDataInterface.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewData/EmailViewDataAbstract.php" />
+        <option value="$PROJECT_DIR$/src/EmailViewData/Development/TestEmailViewData.php" />
+        <option value="$PROJECT_DIR$/src/EmailCreators/EmailCreatorAbstract.php" />
         <option value="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php" />
+        <option value="$PROJECT_DIR$/src/Managers/Emails/EmailManager.php" />
+        <option value="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmailViaJob.php" />
+        <option value="$PROJECT_DIR$/example/EmailViewData/Development/TestEmailViewData.php" />
+        <option value="$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php" />
+        <option value="$PROJECT_DIR$/example/EmailCreators/Development/TestEmailCreator.php" />
+        <option value="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmail.php" />
+        <option value="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -154,7 +219,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
@@ -175,8 +240,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,20 +252,65 @@
             <path>
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
               <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Console" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Console" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Commands" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Console" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Commands" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Emails" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EmailCreators" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EmailCreators" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Development" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EmailViewData" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EmailViewData" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Development" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Providers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
               <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lists" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
@@ -227,7 +337,7 @@
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
               <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EmailCreators" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
@@ -239,54 +349,7 @@
               <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
               <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Emails" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Emails" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Development" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Jobs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Lists" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Lists" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Emails" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Lists" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Emails" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Development" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="marketing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketing" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Providers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -300,13 +363,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\development\marketing\example\Providers" />
+      <recent name="C:\wamp64\www\development\marketing\src" />
       <recent name="C:\wamp64\www\development\marketing" />
       <recent name="C:\wamp64\www\development\marketing\src\Console\Commands\Emails" />
       <recent name="C:\wamp64\www\development\marketing\src\EmailDispatchers" />
-      <recent name="C:\wamp64\www\development\marketing\src\Emails" />
-      <recent name="C:\wamp64\www\development\marketing\src\Config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\development\marketing\example\EmailCreators" />
+      <recent name="C:\wamp64\www\development\marketing\example\EmailViewData" />
+      <recent name="C:\wamp64\www\development\marketing\example\Console\Commands\Emails" />
+      <recent name="C:\wamp64\www\development\marketing\src\Emails" />
       <recent name="C:\wamp64\www\development\marketing\src\EmailDispatchers" />
     </key>
   </component>
@@ -336,27 +403,28 @@
       <workItem from="1571829952758" duration="45000" />
       <workItem from="1571830011350" duration="13400000" />
       <workItem from="1571923892240" duration="10853000" />
-      <workItem from="1571992857026" duration="3670000" />
+      <workItem from="1571992857026" duration="5204000" />
+      <workItem from="1572363428909" duration="17802000" />
+      <workItem from="1573722076529" duration="10359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29360000" />
+    <option name="totallyTimeSpent" value="59055000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -377,47 +445,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="52" column="6" lean-forward="false" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-          <folding>
-            <element signature="e#64#131#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jobs/SendEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Emails/EmailInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/SMS/SMSManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Managers/SMS/SMSManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -448,20 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/MandrillManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1371">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/Emails/EmailManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/DisplayList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1034">
@@ -474,13 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -545,64 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Emails/Development/Outlook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/ListProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/TestEmailViaJob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/lists/emails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Emails/EmailAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jobs/SendEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#57#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/UpdateBouncedEmails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -635,61 +583,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Emails/Development/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#59#106#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/Views/emails/emails/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/2018_12_18_164342_change_field_name_on_email_sent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/2018_12_18_164342_change_field_name_on_email_sent.php" />
     <entry file="file://$PROJECT_DIR$/src/Database/2019_01_04_104849_add_unique_id_to_emails_sent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/2019_01_04_124058_add_email_to_email_sent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/2019_01_04_124058_add_email_to_email_sent.php" />
     <entry file="file://$PROJECT_DIR$/src/Database/2019_01_03_160315_create_email_bounce_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,61 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#57#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding>
-            <element signature="e#57#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Emails/EmailInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/Development/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="24" />
-          <folding>
-            <element signature="e#64#131#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,6 +631,195 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/ListProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/lists/emails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/Development/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lists/Emails/ListProviderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailCreators/EmailCreatorInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailCreators/Development/OutlookEmailCreator.php" />
+    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#57#119#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/MandrillManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailCreators/EmailRecipientData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jobs/SendEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailViewData/EmailViewDataAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailViewData/EmailViewDataInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/Emails/EmailManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#56#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailCreators/EmailCreatorAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/Console/Commands/Emails/TestEmailViaJob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="55" />
+          <folding>
+            <element signature="e#81#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/EmailCreators/Development/TestEmailCreator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#83#144#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/EmailViewData/Development/TestEmailViewData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="55" />
+          <folding>
+            <element signature="e#83#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="37" />
+          <folding>
+            <element signature="e#50#112#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/Console/Commands/Emails/TestEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <element signature="e#81#167#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#67#144#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,4 @@
-<?php namespace SamJoyce777\Marketing\Console\Commands\Emails;
+<?php namespace ElmhurstProjects\CommunicationsExample\Console\Commands\Emails;
 
 use SamJoyce777\Marketing\Emails\MandrillEmailDispatcher;
 use SamJoyce777\Marketing\Emails\WeeklyBroadband\SocialMedia;

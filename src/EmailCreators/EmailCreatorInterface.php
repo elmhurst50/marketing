@@ -1,8 +1,6 @@
-<?php namespace SamJoyce777\Marketing\Emails;
+<?php namespace SamJoyce777\Marketing\EmailCreators;
 
-use SamJoyce777\Marketing\Lists\Emails\EmailRecipientData;
-
-interface EmailInterface
+interface EmailCreatorInterface
 {
     public function getTitle():string;
 
@@ -20,5 +18,5 @@ interface EmailInterface
 
     public function getMeta():array;
 
-    public function getHTML(EmailRecipientData $emailRecipientData):?string;
+    public function getHTML():?string;
 }

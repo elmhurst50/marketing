@@ -11,5 +11,6 @@ return array(
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'SamJoyce777\\Marketing\\' => array($baseDir . '/src'),
     'Global4Communications\\SMSManager\\' => array($vendorDir . '/global4communications/sms-manager/src'),
+    'ElmhurstProjects\\CommunicationsExample\\' => array($baseDir . '/example'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
 );

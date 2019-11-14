@@ -22,6 +22,10 @@ class ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c
         array (
             'Global4Communications\\SMSManager\\' => 33,
         ),
+        'E' => 
+        array (
+            'ElmhurstProjects\\CommunicationsExample\\' => 39,
+        ),
         'C' => 
         array (
             'Carbon\\' => 7,
@@ -48,6 +52,10 @@ class ComposerStaticInit293bf31c0c397e23f5932ff16ce73a7c
         'Global4Communications\\SMSManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/global4communications/sms-manager/src',
+        ),
+        'ElmhurstProjects\\CommunicationsExample\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/example',
         ),
         'Carbon\\' => 
         array (

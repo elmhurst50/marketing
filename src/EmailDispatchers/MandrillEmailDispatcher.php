@@ -1,7 +1,7 @@
 <?php namespace SamJoyce777\Marketing\EmailDispatchers;
 
-use SamJoyce777\Marketing\Emails\EmailInterface;
-use SamJoyce777\Marketing\Lists\Emails\EmailRecipientData;
+use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
+use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
 
 /**
  * Is in charge of creating and sending an email
@@ -23,35 +23,33 @@ class MandrillEmailDispatcher extends EmailDispatcherAbstract
 
     /**
      * Sends the actual email
-     * @param $email_address
      * @param EmailRecipientData $emailRecipientData - Data sent about the email from the email list provider
-     * @param EmailInterface $email - Email class to send
+     * @param EmailCreatorInterface $emailCreator - Email class to send
      */
-    public function send(string $email_address, EmailRecipientData $emailRecipientData, EmailInterface $email)
+    public function send(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator)
     {
-        $html = $email->getHTML($emailRecipientData);
+        $html = $emailCreator->getHTML();
 
         if ($html) {
-            $emailSent = $this->recordEmailInDatabase($email_address,  $emailRecipientData,  $email);
+            $emailSent = $this->recordEmailInDatabase($emailRecipientData, $emailCreator);
 
-            $this->setEmail($html, '', $email->getSubject());
+            $this->setEmail($html, '', $emailCreator->getSubject());
 
             $this->setTo([[
-                'email' => $email_address,
-                'name' => $emailRecipientData->getField('email_name'),
+                'email' => $emailRecipientData->getEmailAddress(),
+                'name' => $emailRecipientData->getEmailName(),
                 'type' => 'to'
             ]]);
 
-            $this->setFrom($email->getSenderEmail(), $email->getSenderName());
+            $this->setFrom($emailCreator->getSenderEmail(), $emailCreator->getSenderName());
 
-            $this->setTags($email->getTags());
+            $this->setTags($emailCreator->getTags());
 
             $this->setMeta(['eid' => $emailSent->email_uid]);
 
             $this->mandrill->messages->send($this->mandrill_array);
-
         } else {
-            \Logger::error('email', 'Email.php - Not enough data fields: ' . $email_address . ' Missing: ' . serialize($html) . ' Provided: ' . serialize($emailRecipientData->getData()));
+            \Log::error('Email.php - Not enough data fields: ' . $emailRecipientData->getEmailAddress() . ' Missing: ' . serialize($html));
         }
     }
 

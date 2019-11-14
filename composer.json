@@ -12,20 +12,22 @@
     "require": {
         "Global4Communications/sms-manager": "1.*",
         "mandrill/mandrill": "1.*",
-        "nesbot/carbon": "dev-master"
+        "nesbot/carbon": "1.*"
     },
     "license": "MIT",
     "minimum-stability": "dev",
 
     "autoload": {
         "psr-4": {
-            "SamJoyce777\\Marketing\\": "src/"
+            "SamJoyce777\\Marketing\\": "src/",
+            "ElmhurstProjects\\CommunicationsExample\\": "example/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SamJoyce777\\Marketing\\Providers\\MarketingServiceProvider"
+                "SamJoyce777\\Marketing\\Providers\\MarketingServiceProvider",
+                "ElmhurstProjects\\CommunicationsExample\\Providers\\ExampleServiceProvider"
             ]
         }
     }

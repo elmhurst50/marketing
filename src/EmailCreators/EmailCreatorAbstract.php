@@ -1,13 +1,13 @@
-<?php namespace SamJoyce777\Marketing\Emails;
+<?php namespace SamJoyce777\Marketing\EmailCreators;
 
-use SamJoyce777\Marketing\Lists\Emails\EmailRecipientData;
+use SamJoyce777\Marketing\EmailViewData\EmailViewDataInterface;
 
 /**
  * Is in charge of creating an email
  * Class Email
  * @package SamJoyce777\Marketing\Emails
  */
-abstract class EmailAbstract
+abstract class EmailCreatorAbstract
 {
     protected $title;
 
@@ -21,7 +21,9 @@ abstract class EmailAbstract
 
     protected $subject;
 
-    protected $required_data;
+    protected $view_data_fields = [];
+
+    protected $required_view_data_fields = ['name'];
 
     protected $tags = [];
 
@@ -29,40 +31,55 @@ abstract class EmailAbstract
 
     /**
      * Gets the HTML for the email
-     * @param EmailRecipientData $emailRecipientData
-     * @return mixed
+     * @return string
      */
-    public function getHTML(EmailRecipientData $emailRecipientData):?string
+    public function getHTML(): string
     {
-        $hasAllRequiredData = $this->hasAllRequiredData($emailRecipientData->getData());
-
-        if ($hasAllRequiredData === true) {
-            return view($this->getTemplate())
-                ->with('data', $emailRecipientData->getData(false))
-                ->render();
-        } else {
-            \Logger::error('email', 'Email.php - Not enough data fields: ' . serialize($emailRecipientData) . ' Missing: ' . serialize($hasAllRequiredData) . ' Provided: ' . serialize($emailRecipientData->getData()));
-
-            return null;
-        }
+        return view($this->getTemplate())
+            ->with('data', (object)$this->view_data_fields)
+            ->render();
     }
 
     /**
      * Checks to see if the required data fields for the blade are provided
-     * @param array $data
-     * @return array|bool
+     * @return bool
      */
-    protected function hasAllRequiredData(array $data)
+    public function hasAllRequiredData(): bool
+    {
+        return count($this->getMissingFields()) == 0;
+    }
+
+    /**
+     * Get the missing fields from the supplied view data fields
+     * @return array
+     */
+    public function getMissingFields(): array
     {
         $missing_fields = [];
 
-        foreach ($this->required_data as $field) {
-            if (!array_key_exists($field, $data)) $missing_fields[] = $field;
+        foreach ($this->required_view_data_fields as $field) {
+            if (!array_key_exists($field, $this->view_data_fields)) $missing_fields[] = $field;
         }
 
-        if (count($missing_fields) > 0) return $missing_fields;
+        return $missing_fields;
+    }
 
-        return true;
+    /**
+     * Get the required view data fields for this email
+     * @return array
+     */
+    public function getRequiredFields(): array
+    {
+        return $this->required_view_data_fields;
+    }
+
+    /**
+     * Sets the view data fields for blade template
+     * @param EmailViewDataInterface $emailViewData
+     */
+    public function setViewDataFields(EmailViewDataInterface $emailViewData)
+    {
+        $this->view_data_fields = $emailViewData->getViewData();
     }
 
     /**

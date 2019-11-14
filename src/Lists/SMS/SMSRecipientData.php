@@ -2,7 +2,7 @@
 
 use Global4Communications\Residential\Core\Models\ResidentialCustomer;
 use Carbon\Carbon;
-use SamJoyce777\Marketing\Lists\Emails\ListProviderInterface;
+use SamJoyce777\Marketing\Emails\ListProviderInterface;
 
 class SMSRecipientData
 {

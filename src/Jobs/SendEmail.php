@@ -3,6 +3,10 @@
 namespace SamJoyce777\Marketing\Jobs;
 
 use Carbon\Carbon;
+use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
+use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
+use SamJoyce777\Marketing\EmailDispatchers\EmailDispatcherInterface;
+use SamJoyce777\Marketing\Managers\Emails\EmailManager;
 use SamJoyce777\Marketing\Models\EmailSent;
 use Illuminate\Bus\Queueable;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -21,32 +25,22 @@ class SendEmail implements ShouldQueue
 
     public $tries = 2;
 
-    protected $email_name;
+    protected $emailRecipientData;
 
-    protected $email_class;
+    protected $emailCreator;
 
-    protected $email_dispatcher_class;
-
-    protected $list_class;
-
-    protected $email_address;
+    protected $emailManager;
 
     /**
      * SendEmail constructor.
-     * @param $email_dispatcher_class - email dispatcher class name
-     * @param $email_class - email class name
-     * @param $list_class - list class name
-     * @param $email_address - email address to send to
+     * @param EmailRecipientData $emailRecipientData
+     * @param EmailCreatorInterface $emailCreator
      */
-    public function __construct(string $email_dispatcher_class, string $email_class, string $list_class, string $email_address)
+    public function __construct(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator)
     {
-        $this->email_dispatcher_class = $email_dispatcher_class;
+        $this->emailRecipientData = $emailRecipientData;
 
-        $this->email_class = $email_class;
-
-        $this->list_class = $list_class;
-
-        $this->email_address = $email_address;
+        $this->emailCreator = $emailCreator;
     }
 
     /**
@@ -56,18 +50,18 @@ class SendEmail implements ShouldQueue
      */
     public function handle()
     {
-        $email = new $this->email_class;
-
-        $list_provider = new $this->list_class;
-
-        $email_dispatcher = new $this->email_dispatcher_class;
+        $this->emailManager = new EmailManager();
 
         try{
-            $emailRecipientData = $list_provider->getEmailRecipientData($this->email_address);
-
-            $email_dispatcher->send($this->email_address, $emailRecipientData, $email);
+            $this->emailManager->sendEmail($this->emailRecipientData, $this->emailCreator);
         }catch (\Exception $e){
-            \Log::error('SendEmail.php - Could not send email to: ' . $this->email_address . ' due to: ' . $e->getMessage());
+            \Log::error('SendEmail.php - Could not send email to: '
+                . $this->emailRecipientData->getEmailAddress()
+                . ' Email recipient: '
+                . serialize($this->emailRecipientData)
+                . ' Email Creator: '
+                . serialize($this->emailCreator)
+                . ' due to: ' . $e->getMessage());
         }
     }
 }

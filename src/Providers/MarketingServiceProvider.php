@@ -7,7 +7,6 @@ use SamJoyce777\Marketing\Console\Commands\Emails\MandrillDailyStatistics;
 use SamJoyce777\Marketing\Console\Commands\Emails\MandrillDownloadReport;
 use SamJoyce777\Marketing\Console\Commands\Emails\MandrillRequestStatistics;
 use SamJoyce777\Marketing\Console\Commands\Emails\SendList;
-use SamJoyce777\Marketing\Console\Commands\Emails\TestEmail;
 use SamJoyce777\Marketing\Console\Commands\Emails\UpdateBouncedEmails;
 use SamJoyce777\Marketing\Console\Commands\Emails\UpdateSoftBouncedEmails;
 use SamJoyce777\Marketing\Console\Commands\SMS\SendMessage;
@@ -46,7 +45,6 @@ class MarketingServiceProvider extends ServiceProvider
             $this->commands([
                 //Emails
                 SendList::class,
-                TestEmail::class,
                 DisplayList::class,
                 MandrillRequestStatistics::class,
                 MandrillCheckReport::class,

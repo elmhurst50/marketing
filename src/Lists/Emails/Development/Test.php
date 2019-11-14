@@ -1,7 +1,6 @@
 <?php namespace SamJoyce777\Marketing\Lists\Emails\Development;
 
-use Global4Communications\Residential\Core\Models\ResidentialCustomer;
-use SamJoyce777\Marketing\Lists\Emails\EmailRecipientData;
+use SamJoyce777\Marketing\Emails\EmailRecipientData;
 use SamJoyce777\Marketing\Lists\Emails\ListProvider;
 use SamJoyce777\Marketing\Lists\Emails\ListProviderInterface;
 
@@ -11,12 +10,7 @@ class Test extends ListProvider implements ListProviderInterface
 
     protected $description = 'Just to developers';
 
-    protected $email_recipient_data;
 
-    public function __construct()
-    {
-        $this->email_recipient_data = new EmailRecipientData();
-    }
 
     public function query($options)
     {
