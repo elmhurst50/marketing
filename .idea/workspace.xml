@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6dded8-7e45-408b-b579-79494137c673" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailRecipientData.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Emails/Development/Outlook.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lists/Emails/EmailRecipientData.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmail.php" afterPath="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmail.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Console/Commands/Emails/TestEmailViaJob.php" afterPath="$PROJECT_DIR$/example/Console/Commands/Emails/TestEmailViaJob.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/Development/Test.php" afterPath="$PROJECT_DIR$/example/EmailCreators/Development/TestEmailCreator.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/EmailAbstract.php" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailCreatorAbstract.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Emails/EmailInterface.php" afterPath="$PROJECT_DIR$/src/EmailCreators/EmailCreatorInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config/lists/emails.php" afterPath="$PROJECT_DIR$/src/Config/lists/emails.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/EmailDispatcherInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php" afterPath="$PROJECT_DIR$/src/EmailDispatchers/MandrillEmailDispatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jobs/SendEmail.php" afterPath="$PROJECT_DIR$/src/Jobs/SendEmail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" afterPath="$PROJECT_DIR$/src/Lists/Emails/Development/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/Emails/ListProvider.php" afterPath="$PROJECT_DIR$/src/Lists/Emails/ListProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lists/SMS/SMSRecipientData.php" afterPath="$PROJECT_DIR$/src/Lists/SMS/SMSRecipientData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Managers/Emails/EmailManager.php" afterPath="$PROJECT_DIR$/src/Managers/Emails/EmailManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" afterPath="$PROJECT_DIR$/src/Providers/MarketingServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="638">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="e#67#144#0#PHP" expanded="true" />
               </folding>
@@ -414,6 +390,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -809,7 +786,7 @@
     <entry file="file://$PROJECT_DIR$/example/Providers/ExampleServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="e#67#144#0#PHP" expanded="true" />
           </folding>
@@ -819,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
