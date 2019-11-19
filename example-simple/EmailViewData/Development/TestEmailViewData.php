@@ -1,4 +1,4 @@
-<?php namespace ElmhurstProjects\CommunicationsExample\EmailViewData\Development;
+<?php namespace ElmhurstProjects\CommunicationsExampleSimple\EmailViewData\Development;
 
 use SamJoyce777\Marketing\EmailViewData\EmailViewDataAbstract;
 use SamJoyce777\Marketing\EmailViewData\EmailViewDataInterface;

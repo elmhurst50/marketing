@@ -1,4 +1,4 @@
-<?php namespace ElmhurstProjects\CommunicationsExample\EmailCreators\Development;
+<?php namespace ElmhurstProjects\CommunicationsExampleSimple\EmailCreators\Development;
 
 use SamJoyce777\Marketing\EmailCreators\EmailCreatorAbstract;
 use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;

@@ -43,8 +43,6 @@ class DisplayList extends Command
      */
     public function handle()
     {
-        $audit = ConsoleAudit::create(['name' => $this->getName(), 'description' => $this->getDescription()]);
-
         $email_identifier = $this->argument('email_identifier');
 
         $list_class = config('marketing.lists.emails.' . $this->argument('list_identifier'));
@@ -70,8 +68,6 @@ class DisplayList extends Command
         $this->info('Number of emails from list: ' . count($email_addresses));
         $this->info('Number of emails that have the email in the last ' . $this->option('days_since_last_email') . ' days: ' . count($sent_email_addresses));
         $this->info('Number of valid emails to send: ' . count($valid_email_addresses));
-
-        $audit->update(['completed_at' => Carbon::now()->toDateTimeString()]);
 
         $this->info('There are ' . count($email_addresses) . ' emails.');
     }

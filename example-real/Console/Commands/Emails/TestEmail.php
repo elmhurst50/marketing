@@ -1,9 +1,9 @@
-<?php namespace ElmhurstProjects\CommunicationsExample\Console\Commands\Emails;
+<?php namespace ElmhurstProjects\CommunicationsExampleReal\Console\Commands\Emails;
 
-use ElmhurstProjects\CommunicationsExample\EmailCreators\Development\TestEmailCreator;
+use ElmhurstProjects\CommunicationsExampleSimple\EmailCreators\Development\TestEmailCreator;
 use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
 use Illuminate\Console\Command;
-use ElmhurstProjects\CommunicationsExample\EmailViewData\Development\TestEmailViewData;
+use ElmhurstProjects\CommunicationsExampleSimple\EmailViewData\Development\TestEmailViewData;
 use SamJoyce777\Marketing\Managers\Emails\EmailManager;
 
 class TestEmail extends Command
@@ -73,7 +73,7 @@ class TestEmail extends Command
 
         $emailRecipientData->setEmailAddress($this->argument('email_address'))->setEmailName('sambo');
 
-        $emailViewData->setViewDataByArray(['name' => 'fdgdgfdgfdgfd']);
+        $emailViewData->setViewDataByArray(['name' => 'Mr Test Name']);
 
         $emailCreator->setViewDataFields($emailViewData);
 

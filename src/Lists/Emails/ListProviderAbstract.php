@@ -2,7 +2,7 @@
 
 use SamJoyce777\Marketing\Emails\EmailRecipientData;
 
-abstract class ListProvider
+abstract class ListProviderAbstract
 {
     protected $title;
 
@@ -25,7 +25,7 @@ abstract class ListProvider
         return $this->description;
     }
 
-    public function getList($options)
+    public function getList(array $options)
     {
         $query = $this->query($options);
 
@@ -34,10 +34,10 @@ abstract class ListProvider
 
     /**
      * Returns the qty in the list
-     * @param $options
+     * @param array $options
      * @return int
      */
-    public function getCount($options):int
+    public function getCount(array $options):int
     {
         $query = $this->query($options);
 
@@ -46,10 +46,10 @@ abstract class ListProvider
 
     /**
      * Returns the SQL string
-     * @param $options
+     * @param array $options
      * @return string
      */
-    public function getSql($options):string
+    public function getSql(array $options):string
     {
         $query = $this->query($options);
 

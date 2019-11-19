@@ -20,7 +20,8 @@
     "autoload": {
         "psr-4": {
             "SamJoyce777\\Marketing\\": "src/",
-            "ElmhurstProjects\\CommunicationsExample\\": "example/"
+            "ElmhurstProjects\\CommunicationsExampleSimple\\": "example-simple/",
+            "ElmhurstProjects\\CommunicationsExampleReal\\": "example-real/"
         }
     },
     "extra": {

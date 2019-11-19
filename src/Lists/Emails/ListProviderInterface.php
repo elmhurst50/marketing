@@ -9,36 +9,36 @@ interface ListProviderInterface
 
     /**
      * Returns list of all emails
-     * * @param $options - object
-     * @return mixed
+     * @param array $options
+     * @return array
      */
-    public function getList($options);
+    public function getList(array $options): array;
 
     /**
      * Returns count of emails
-     * * @param $options - object
-     * @return mixed
+     * @param array $options
+     * @return integer
      */
-    public function getCount($options);
+    public function getCount(array $options): int;
 
     /**
      * Returns sql of query
-     * * @param $options - object
-     * @return mixed
+     * @param array $options
+     * @return string
      */
-    public function getSql($options);
+    public function getSql(array $options): string;
 
     /**
      * the query
-     * * @param $options - object
+     * @param array $options
      * @return mixed
      */
-    public function query($options);
+    public function query(array $options);
 
     /**
      * gets the data to be used by email templates
-     * @param $email
+     * @param string $email
      * @return EmailRecipientData
      */
-    public function getEmailRecipientData($email);
+    public function getEmailRecipientData(string $email);
 }

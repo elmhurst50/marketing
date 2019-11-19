@@ -1,13 +1,13 @@
-<?php namespace ElmhurstProjects\CommunicationsExample\Providers;
+<?php namespace ElmhurstProjects\CommunicationsExampleReal\Providers;
 
-use ElmhurstProjects\CommunicationsExample\Console\Commands\Emails\TestEmail;
+use ElmhurstProjects\CommunicationsExampleSimple\Console\Commands\Emails\TestEmail;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailsSidebarComposer;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailListsSidebarComposer;
 use Illuminate\Support\ServiceProvider;
 use SamJoyce777\Marketing\Http\ViewComposers\SMSListsSidebarComposer;
 use SamJoyce777\Marketing\Http\ViewComposers\SMSSidebarComposer;
 
-class ExampleServiceProvider extends ServiceProvider
+class ExampleRealServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.

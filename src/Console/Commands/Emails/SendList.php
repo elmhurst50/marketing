@@ -47,8 +47,6 @@ class SendList extends Command
      */
     public function handle()
     {
-        $audit = ConsoleAudit::create(['name' => $this->getName(), 'description' => $this->getDescription()]);
-
         $email_identifier = $this->argument('email_identifier');
 
         $list_class = config('marketing.lists.emails.' . $this->argument('list_identifier'));
@@ -87,8 +85,6 @@ class SendList extends Command
                     $this->warn('SendList.php Could not send email to: ' . $email_address . ' due to: ' . $e->getMessage());
                 }
             }
-
-            $audit->update(['completed_at' => Carbon::now()->toDateTimeString()]);
 
             $this->info('Complete!');
         } else {
