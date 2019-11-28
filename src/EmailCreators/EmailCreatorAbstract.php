@@ -23,7 +23,7 @@ abstract class EmailCreatorAbstract
 
     protected $view_data_fields = [];
 
-    protected $required_view_data_fields = ['name'];
+    protected $required_view_data_fields = [];
 
     protected $tags = [];
 
@@ -33,7 +33,7 @@ abstract class EmailCreatorAbstract
      * Gets the HTML for the email
      * @return string
      */
-    public function getHTML(): string
+    public function getHTML():? string
     {
         return view($this->getTemplate())
             ->with('data', (object)$this->view_data_fields)

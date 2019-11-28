@@ -9,7 +9,7 @@ class ConfirmOrderEmailCreator extends EmailCreatorAbstract implements EmailCrea
 
     protected $description = 'Confirms the order to the customer';
 
-    protected $template = 'marketing.development.test';
+    protected $template = 'example-real::test';
 
     protected $sender_email = 'orders@global4.co.uk';
 
@@ -17,7 +17,7 @@ class ConfirmOrderEmailCreator extends EmailCreatorAbstract implements EmailCrea
 
     protected $subject = 'Order confirmation';
 
-    protected $required_data = ['name', 'email', 'order_id'];
+    protected $required_view_data_fields = ['order_id', 'amount'];
 
     protected $tags = ['test tag'];
 }

@@ -1,6 +1,6 @@
 <?php namespace ElmhurstProjects\CommunicationsExampleReal\Providers;
 
-use ElmhurstProjects\CommunicationsExampleSimple\Console\Commands\Emails\TestEmail;
+use ElmhurstProjects\CommunicationsExampleReal\Console\Commands\Emails\TestRealEmail;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailsSidebarComposer;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailListsSidebarComposer;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +16,7 @@ class ExampleRealServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'marketing');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'example-real');
 
         view()->composer(['marketing::emails.emails.common.sidebar'], EmailsSidebarComposer::class);
 
@@ -28,7 +28,7 @@ class ExampleRealServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                 TestEmail::class,
+                 TestRealEmail::class,
             ]);
         }
     }
@@ -40,5 +40,6 @@ class ExampleRealServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
     }
 }

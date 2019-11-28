@@ -12,7 +12,8 @@
     "require": {
         "Global4Communications/sms-manager": "1.*",
         "mandrill/mandrill": "1.*",
-        "nesbot/carbon": "1.*"
+        "nesbot/carbon": "1.*",
+        "elmhurstprojects/core-for-projects": "dev-master"
     },
     "license": "MIT",
     "minimum-stability": "dev",
@@ -28,7 +29,8 @@
         "laravel": {
             "providers": [
                 "SamJoyce777\\Marketing\\Providers\\MarketingServiceProvider",
-                "ElmhurstProjects\\CommunicationsExample\\Providers\\ExampleServiceProvider"
+                "ElmhurstProjects\\CommunicationsExampleSimple\\Providers\\ExampleSimpleServiceProvider",
+                "ElmhurstProjects\\CommunicationsExampleReal\\Providers\\ExampleRealServiceProvider"
             ]
         }
     }

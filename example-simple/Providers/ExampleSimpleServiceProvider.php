@@ -1,6 +1,6 @@
 <?php namespace ElmhurstProjects\CommunicationsExampleSimple\Providers;
 
-use ElmhurstProjects\CommunicationsExampleSimple\Console\Commands\Emails\TestEmail;
+use ElmhurstProjects\CommunicationsExampleSimple\Console\Commands\Emails\TestSimpleEmail;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailsSidebarComposer;
 use SamJoyce777\Marketing\Http\ViewComposers\EmailListsSidebarComposer;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +16,7 @@ class ExampleSimpleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'marketing');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'example-simple');
 
         view()->composer(['marketing::emails.emails.common.sidebar'], EmailsSidebarComposer::class);
 
@@ -28,7 +28,7 @@ class ExampleSimpleServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                 TestEmail::class,
+                 TestSimpleEmail::class,
             ]);
         }
     }

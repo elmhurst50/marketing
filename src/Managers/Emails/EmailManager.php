@@ -1,6 +1,8 @@
 <?php namespace SamJoyce777\Marketing\Managers\Emails;
 
 use Carbon\Carbon;
+use ElmhurstProjects\Core\Responses\CoreResponse;
+use ElmhurstProjects\Core\Responses\ResponseInterface;
 use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
 use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
 use SamJoyce777\Marketing\EmailDispatchers\MandrillEmailDispatcher;
@@ -12,32 +14,36 @@ use SamJoyce777\Marketing\Models\EmailBlackList;
  * Class EmailManager
  * @package SamJoyce777\Marketing\Managers\Emails
  */
-class EmailManager
+class EmailManager extends CoreResponse implements ResponseInterface
 {
     protected $emailDispatcher;
+
+    protected $emailResponse;
 
     public function __construct()
     {
         $this->emailDispatcher = new MandrillEmailDispatcher();
+
+        $this->emailResponse = new EmailResponse();
     }
 
     /**
      * Send the email
      * @param EmailRecipientData $emailRecipientData
      * @param EmailCreatorInterface $emailCreator
-     * @return bool
+     * @return EmailResponse
      */
-    public function sendEmail(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator):bool
+    public function sendEmail(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator):EmailResponse
     {
         if(!$this->allowedToSend($emailRecipientData->getEmailAddress())) return false;
 
         if ($emailCreator->hasAllRequiredData()) {
             $this->emailDispatcher->send($emailRecipientData, $emailCreator);
 
-            return true;
+            return $this->emailResponse->successful();
         }
 
-        return false;
+        return $this->emailResponse->failed('Does not have all the required view data');
     }
 
     /**

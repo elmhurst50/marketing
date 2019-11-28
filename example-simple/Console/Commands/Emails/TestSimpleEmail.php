@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use ElmhurstProjects\CommunicationsExampleSimple\EmailViewData\Development\TestEmailViewData;
 use SamJoyce777\Marketing\Managers\Emails\EmailManager;
 
-class TestEmail extends Command
+class TestSimpleEmail extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'emails:test {email_address}';
+    protected $signature = 'emails-simple:test {email_address}';
 
     /**
      * The console command description.

@@ -1,26 +1,28 @@
 <?php namespace ElmhurstProjects\CommunicationsExampleReal\Console\Commands\Emails;
 
+use ElmhurstProjects\CommunicationsExampleReal\EmailCreators\Development\ConfirmOrderEmailCreator;
+use ElmhurstProjects\CommunicationsExampleReal\EmailViewData\Development\ConfirmOrderViewData;
 use ElmhurstProjects\CommunicationsExampleSimple\EmailCreators\Development\TestEmailCreator;
 use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
 use Illuminate\Console\Command;
 use ElmhurstProjects\CommunicationsExampleSimple\EmailViewData\Development\TestEmailViewData;
 use SamJoyce777\Marketing\Managers\Emails\EmailManager;
 
-class TestEmail extends Command
+class TestRealEmail extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'emails:test {email_address}';
+    protected $signature = 'emails-real:test {email_address}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Test email';
+    protected $description = 'Test email with a bit more real world data';
 
     protected $list;
 
@@ -52,7 +54,7 @@ class TestEmail extends Command
         /*
          * This will create the email from the template specified within the class
          */
-        $emailCreator = new TestEmailCreator();
+        $emailCreator = new ConfirmOrderEmailCreator();
 
         /*
          * This will be in control of the recipient data, such as email address, name, tags
@@ -65,7 +67,7 @@ class TestEmail extends Command
          * You can either send in an array from the abstracted method or create the data using
          * the classes unique methods
          */
-        $emailViewData = new TestEmailViewData();
+        $emailViewData = new ConfirmOrderViewData();
 
         $email_address = $this->argument('email_address');
 
@@ -73,7 +75,10 @@ class TestEmail extends Command
 
         $emailRecipientData->setEmailAddress($this->argument('email_address'))->setEmailName('sambo');
 
-        $emailViewData->setViewDataByArray(['name' => 'Mr Test Name']);
+        /*
+         * Notice we now are call a customer method that will build all the view data
+         */
+        $emailViewData->setViewDataByOrderID(52623);
 
         $emailCreator->setViewDataFields($emailViewData);
 

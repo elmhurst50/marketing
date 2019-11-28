@@ -5,19 +5,19 @@ use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
 
 class TestEmailCreator extends EmailCreatorAbstract implements EmailCreatorInterface
 {
-    protected $title = 'Test Email';
+    protected $title = 'Test Simple Email';
 
     protected $description = 'Test Email for development work';
 
-    protected $template = 'marketing.development.test';
+    protected $template = 'example-simple::test';
 
     protected $sender_email = 'test@global4.co.uk';
 
     protected $sender_name = 'Test Person';
 
-    protected $subject = 'Test Subject 3';
+    protected $subject = 'Simple Example Test';
 
-    protected $required_data = ['name', 'email', 'order_id'];
+    protected $required_view_data_fields = ['name', 'email', 'order_id'];
 
-    protected $tags = ['test tag'];
+    protected $tags = ['simple test'];
 }
