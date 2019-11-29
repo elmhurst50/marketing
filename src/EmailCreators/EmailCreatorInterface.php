@@ -19,4 +19,6 @@ interface EmailCreatorInterface
     public function getMeta():array;
 
     public function getHTML():?string;
+
+    public function hasAllRequiredData():bool;
 }

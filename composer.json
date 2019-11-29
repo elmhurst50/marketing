@@ -1,7 +1,7 @@
 {
     "name": "samjoyce777/marketing",
     "description": "Marketing package",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "library",
     "repositories": [
         {
@@ -13,10 +13,9 @@
         "Global4Communications/sms-manager": "1.*",
         "mandrill/mandrill": "1.*",
         "nesbot/carbon": "1.*",
-        "elmhurstprojects/core-for-projects": "dev-master"
+        "elmhurstprojects/core-for-projects": ">+=.0.11"
     },
     "license": "MIT",
-    "minimum-stability": "dev",
 
     "autoload": {
         "psr-4": {

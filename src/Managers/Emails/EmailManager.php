@@ -1,8 +1,6 @@
 <?php namespace SamJoyce777\Marketing\Managers\Emails;
 
 use Carbon\Carbon;
-use ElmhurstProjects\Core\Responses\CoreResponse;
-use ElmhurstProjects\Core\Responses\ResponseInterface;
 use SamJoyce777\Marketing\EmailCreators\EmailCreatorInterface;
 use SamJoyce777\Marketing\EmailCreators\EmailRecipientData;
 use SamJoyce777\Marketing\EmailDispatchers\MandrillEmailDispatcher;
@@ -14,7 +12,7 @@ use SamJoyce777\Marketing\Models\EmailBlackList;
  * Class EmailManager
  * @package SamJoyce777\Marketing\Managers\Emails
  */
-class EmailManager extends CoreResponse implements ResponseInterface
+class EmailManager
 {
     protected $emailDispatcher;
 
@@ -35,7 +33,7 @@ class EmailManager extends CoreResponse implements ResponseInterface
      */
     public function sendEmail(EmailRecipientData $emailRecipientData, EmailCreatorInterface $emailCreator):EmailResponse
     {
-        if(!$this->allowedToSend($emailRecipientData->getEmailAddress())) return false;
+        if(!$this->allowedToSend($emailRecipientData->getEmailAddress())) $this->emailResponse->failed('Not allowed to send to this email address');
 
         if ($emailCreator->hasAllRequiredData()) {
             $this->emailDispatcher->send($emailRecipientData, $emailCreator);
